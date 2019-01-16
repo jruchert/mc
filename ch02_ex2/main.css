@@ -1,37 +1,92 @@
+/*
+ * Michael Cummings
+ * CS-229 12:30am
+ * Jeremy Ruchart
+ * ch02_ex2
+ */
+
+/* Added android font */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+    margin: 1em;
+    padding: 0;
 }
+
+button {
+    border-radius: 1em;
+}
+
+/* added border-radius */
 main {
     display: block;
     width: 450px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1.5em;
     background: white;
     border: 2px solid navy;
+    border-radius: 1em;
 }
+
 h1 {
-    margin-top: 0;
     color: navy;
 }
-label {
+
+/* Original css I left for reference */
+/*label {*/
+/*width: 10em;*/
+/*padding-right: 1em;*/
+/*float: left;*/
+/*}*/
+
+/* New css to align label text etc. */
+label span:first-child {
+    display: inline-block;
     width: 10em;
-    float: left;
-    padding-right: 1em;
-    padding-bottom: .5em;
+    padding-right: .25em;
+    text-align: right;
 }
-#data input {
-    float: left;
+
+/* Force browsers to use same test size for input as they use for normal text instead of 80%
+ Some other common input settings that I override as needed below. */
+input {
+    font-size: 100%;
+    margin-bottom: .5em;
     width: 15em;
-    margin-bottom: .5em;
 }
-#buttons input {
-    float: left;
-    margin-bottom: .5em;
+
+/* Add a little margin to button so it align with other inputs better.
+   Reset (override) width from above. */
+input[type=submit] {
+    background-color: green;
+    border-radius: .5em;
+    color: white;
+    margin-left: .25em;
+    width: auto;
 }
+
+/* Original css */
+/*#data input {*/
+/*!*float: left;*!*/
+/*width: 15em;*/
+/*margin-bottom: .5em;*/
+/*}*/
+
+/* Original css */
+/*#data span {*/
+/*padding-left: .25em;*/
+/*}*/
+
+/* Original css */
+/*#buttons input {*/
+/*!*float: left;*!*/
+/*margin-bottom: .5em;*/
+/*}*/
+
 br {
     clear: left;
 }
-.error {
-    color: red;
-    font-weight: bold;
+
+/* New css class to right align numbers in input etc. */
+.right {
+    text-align: right;
 }
